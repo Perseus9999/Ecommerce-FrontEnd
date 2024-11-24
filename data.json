@@ -1,1 +1,3 @@
-menubar items
+{
+  "menuList": ["Home", "Shop", "About", "Vendors", "Blog", "Pages", "Contact"]
+}

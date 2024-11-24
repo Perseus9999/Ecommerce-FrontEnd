@@ -30,7 +30,7 @@ const TopHeader = () => {
           </div>
         </div>
       </section>
-      <section className='mx-[10%] grid grid-cols-[15%_50%_40%] items-center my-4'>
+      <section className='mx-[10%] grid grid-cols-[15%_50%_40%] items-center mt-4'>
         <div className='mb-4'>
           <AllCategories />
         </div>
