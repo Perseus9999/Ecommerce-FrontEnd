@@ -1,3 +1,8 @@
+import FacebookIcon from '@/icon/facebookIcon';
+import InstagramIcon from '@/icon/instragamIcon';
+import TwitterIcon from '@/icon/twiterIcon';
+import WhatsAppIcon from '@/icon/whatsAppIcon';
+
 const Footer = () => {
   return (
     <div className='bg-[#e8e8e8] py-6'>
@@ -14,7 +19,12 @@ const Footer = () => {
 
         <section>
           <h2 className='text-[18px] font-bold'>Stay connected</h2>
-          <ul className='mt-2'>iconss</ul>
+          <ul className='mt-2 flex items-center gap-[10px]'>
+            <FacebookIcon color='#929292' size='24' />
+            <InstagramIcon color='#929292' size='24' />
+            <WhatsAppIcon color='#929292' size='24' />
+            <TwitterIcon color='#929292' size='24' />
+          </ul>
         </section>
 
         <section>
