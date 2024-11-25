@@ -1,4 +1,5 @@
 import RightArrowIcon from '@/icon/rightArrowIcone';
+import HeroProduct from './heroProduct';
 
 const Hero = () => {
   return (
@@ -32,7 +33,9 @@ const Hero = () => {
             </span>
           </div>
         </section>
-        <section>jksfbkjsb</section>
+        <section>
+          <HeroProduct />
+        </section>
       </div>
     </div>
   );
