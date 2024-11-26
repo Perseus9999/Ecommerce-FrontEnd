@@ -3,12 +3,21 @@ import SearchBar from './SearchBar';
 import CartIcon from '@/icon/cartIcon';
 import AllCategories from './AllCategories';
 import MenuList from './MenuList';
+import Image from 'next/image';
+import logo from '@/image/ecohub.jpeg';
 
 const TopHeader = () => {
   return (
     <div className='bg-[#191919] text-[#FFFFFF] '>
       <section className='mx-[10%] grid grid-cols-[15%_50%_40%] items-center'>
-        <div className='text-6xl'>Logo</div>
+        <div className='text-6xl'>
+          <Image
+            src={logo}
+            width={300}
+            height={300}
+            alt='Picture of the author'
+          />
+        </div>
 
         <SearchBar />
 

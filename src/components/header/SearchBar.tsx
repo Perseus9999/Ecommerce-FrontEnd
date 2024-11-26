@@ -3,7 +3,7 @@ import SearchIcon from '@/icon/searchIcon';
 const SearchBar = () => {
   return (
     <>
-      <div className='flex items-center justify-between border w-[100%] p-[4px] rounded-lg bg-[#FFFFFF]'>
+      <div className='mx-6 flex items-center justify-between border w-[100%] p-[4px] rounded-lg bg-[#FFFFFF]'>
         <div>
           <input
             type='text'
