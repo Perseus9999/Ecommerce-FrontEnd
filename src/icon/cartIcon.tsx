@@ -2,8 +2,9 @@ import React from 'react';
 type Props = {
   color?: string;
   size?: string;
+  className?: string;
 };
-const CartIcon = ({ color, size }: Props) => {
+const CartIcon = ({ color, size, className }: Props) => {
   return (
     <svg
       width={size}
@@ -11,6 +12,7 @@ const CartIcon = ({ color, size }: Props) => {
       viewBox='0 0 24 24'
       fill={color}
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <path
         d='M5 7H13H18.79C19.9733 7 20.8978 8.02164 20.7801 9.19901L20.1801 15.199C20.0779 16.2214 19.2175 17 18.19 17H8.63961C7.68625 17 6.86542 16.3271 6.67845 15.3922L5 7Z'
