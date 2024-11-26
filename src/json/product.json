@@ -1,8 +1,420 @@
 {
-  "product": [
+  "products": [
     {
       "id": 1,
-      "title": ""
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 2,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 3,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 4,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 5,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 6,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 7,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 8,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 9,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 10,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 11,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 12,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 13,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 14,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 15,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 16,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 17,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 18,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 19,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 20,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 21,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 22,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 23,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 24,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 25,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 26,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 27,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 28,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 29,
+      "title": "Rolex uses 904L grade stainless steel",
+      "image": [
+        "/product/rolex0.jpeg",
+        "/product/rolex1.jpeg",
+        "/product/rolex2.jpeg"
+      ],
+      "price": "BDT12000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 3,
+      "exists": "available"
+    },
+    {
+      "id": 30,
+      "title": "NaMeSa hoddies Hoodie",
+      "image": [
+        "/product/hoodie.jpg",
+        "/product/hoodie1.webp",
+        "/product/hoodie3.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 31,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
+    },
+    {
+      "id": 32,
+      "title": "Cricket Bat",
+      "image": [
+        "/product/cricket0.jpg",
+        "/product/cricket3.jpg",
+        "/product/cricket1.webp"
+      ],
+      "price": "BDT1000.89",
+      "details": "; In contrast, most Swiss watches are made with 316L grade steel. Rolex uses the higher grade, as it is more resistant to",
+      "rating": 4,
+      "exists": "available"
     }
   ]
 }

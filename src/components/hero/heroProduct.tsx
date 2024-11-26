@@ -2,8 +2,6 @@ import { heroSlider } from '@/json/data.json';
 import Image from 'next/image';
 
 const HeroProduct = () => {
-  console.log(`📌 ~ heroSlider:`, heroSlider);
-
   return (
     <div className='flex items-center gap-[30px] '>
       {heroSlider.length > 0 &&
