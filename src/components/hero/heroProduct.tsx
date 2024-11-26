@@ -1,4 +1,4 @@
-import { heroSlider } from '../../../data.json';
+import { heroSlider } from '@/json/data.json';
 import Image from 'next/image';
 
 const HeroProduct = () => {

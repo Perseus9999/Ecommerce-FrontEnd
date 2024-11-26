@@ -1,4 +1,4 @@
-import { menuList } from '../../../data.json';
+import { menuList } from '@/json/data.json';
 
 const MenuList = () => {
   return (
