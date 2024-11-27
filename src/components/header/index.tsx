@@ -5,6 +5,9 @@ import AllCategories from './AllCategories';
 import MenuList from './MenuList';
 import Image from 'next/image';
 import logo from '@/image/ecohub.jpeg';
+import { Button } from '@/components/ui/button';
+import { SignIn } from '../auth/signIn';
+import { Register } from '../auth/register';
 
 const TopHeader = () => {
   return (
@@ -21,13 +24,25 @@ const TopHeader = () => {
 
         <SearchBar />
 
-        <div className='flex justify-center gap-[40px]'>
-          <div className='flex items-center gap-1'>
-            <ProfileIcon color='white' size='22' />
-            <p className='leading-none'>
-              <span className='block text-xs'>welcome</span>
-              <span className='text-xs'>Sign In/Register</span>
-            </p>
+        <div className='flex justify-center gap-[40px] '>
+          <div className='relative group'>
+            <div className='flex items-center gap-1 cursor-pointer'>
+              <ProfileIcon color='white' size='22' />
+              <p className='leading-none'>
+                <span className='block text-xs'>welcome</span>
+                <span className='text-xs'>Sign In/Register</span>
+              </p>
+            </div>
+            <div className='absolute left-[-10px] mt-1 bg-white shadow-lg rounded-md p-4 hidden group-hover:block w-[200px]'>
+              <ul className=' text-black '>
+                <li className='mb-2'>
+                  <SignIn />
+                </li>
+                <li className='text-center text-sm text-gray-500 cursor-pointer '>
+                  <Register />
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className='flex items-center gap-1'>
