@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 const Product = () => {
   const products = data.products;
-  console.log(`📌 ~ product:`, products);
 
   return (
     <div className='mx-[10%] my-6 '>
