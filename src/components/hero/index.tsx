@@ -4,7 +4,7 @@ import HeroProduct from './heroProduct';
 const Hero = () => {
   return (
     <div className='bg-[#ff2651]'>
-      <div className=' mx-[10%] flex items-center gap-20'>
+      <div className=' mx-[10%] flex items-center gap-20 sm:'>
         <section className='py-8'>
           <div className='text-xl text-[#FFFFFF] mb-4 '>
             Sales Ends: Dec 4, 13:59 (GMT+6)

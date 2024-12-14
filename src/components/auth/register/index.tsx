@@ -10,12 +10,15 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Link } from 'lucide-react';
 
 export function Register() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <li>Register</li>
+        <ul>
+          <li>Register</li>
+        </ul>
       </DialogTrigger>
       <DialogContent className='sm:max-w-[425px]'>
         <DialogHeader>

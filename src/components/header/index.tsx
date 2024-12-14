@@ -28,12 +28,12 @@ const TopHeader = () => {
           <div className='relative group'>
             <div className='flex items-center gap-1 cursor-pointer'>
               <ProfileIcon color='white' size='22' />
-              <p className='leading-none'>
+              <p className='leading-none p-2'>
                 <span className='block text-xs'>welcome</span>
                 <span className='text-xs'>Sign In/Register</span>
               </p>
             </div>
-            <div className='absolute left-[-10px] mt-1 bg-white shadow-lg rounded-md p-4 hidden group-hover:block w-[200px]'>
+            <div className='absolute left-[-10px]  bg-white shadow-lg rounded-md p-4 hidden group-hover:block w-[200px]'>
               <ul className=' text-black '>
                 <li className='mb-2'>
                   <SignIn />
@@ -54,7 +54,7 @@ const TopHeader = () => {
           </div>
         </div>
       </section>
-      <section className='mx-[10%] grid grid-cols-[15%_50%_40%] items-center mt-4'>
+      <section className='mx-[10%] grid grid-cols-[30%_70%] items-center mt-4'>
         <div className='mb-4'>
           <AllCategories />
         </div>
