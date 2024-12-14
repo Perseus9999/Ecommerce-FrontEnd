@@ -1,5 +1,6 @@
 import CartIcon from '@/icon/cartIcon';
 import data from '@/json/product.json';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Product = () => {
@@ -38,9 +39,11 @@ const Product = () => {
                 <div className='hidden group-hover:block'>
                   <div className='flex items-center justify-between mx-1'>
                     <div>
-                      <button className='bg-black text-[white] p-1 rounded-lg'>
-                        See preview
-                      </button>
+                      <Link href={`/product/${product.id}`}>
+                        <button className='bg-black text-[white] p-1 rounded-lg'>
+                          See preview
+                        </button>
+                      </Link>
                     </div>
                     <div>
                       <button className='bg-black text-[white] p-1 rounded-lg'>
