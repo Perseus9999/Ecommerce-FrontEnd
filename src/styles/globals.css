@@ -23,17 +23,17 @@
   gap: 30px;
 }
 
-@media (max-width: 1536px) {
+@media (max-width: 1700px) {
   .parent-container {
     width: 100%;
     padding: 20px 20px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1536px) {
   .parent-container {
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 20px;
   }
   .navbar-first {
     display: grid;
@@ -43,15 +43,15 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1280px) {
   .parent-container {
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
   .navbar-first {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2.5fr 2fr;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
   }
 }

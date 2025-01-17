@@ -16,7 +16,7 @@ const Layout = () => {
         {/* TOP NAVBAR PART */}
 
         <div className='navbar-first'>
-          <section className='flex items-center justify-start'>
+          <section className='flex items-center justify-start '>
             <Image src={logo} alt='' height={250} width={240} />
           </section>
           <section className=' border rounded-full'>
@@ -31,10 +31,10 @@ const Layout = () => {
               </div>
             </div>
           </section>
-          <section className='flex items-center justify-end gap-4 border'>
-            <div className=' flex items-center gap-2'>
+          <section className='flex items-center justify-end gap-4 border '>
+            <div className=' flex items-center gap-2 '>
               <AppIcon size={24} color='black' />
-              <span className='text-sm'>
+              <span className='text-sm '>
                 Download The <span className='block'>EcoHuB App </span>
               </span>
             </div>
@@ -64,9 +64,7 @@ const Layout = () => {
               <DownArrowIcon size={24} color='black' />
             </section>
           </section>
-          <section>
-            <NavbarListMenu />
-          </section>
+          <section>{/* <NavbarListMenu /> */}</section>
         </div>
       </div>
     </>
