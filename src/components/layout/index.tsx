@@ -7,35 +7,31 @@ import ShoppingCartIcon from '../icon/cartIcone';
 import { Button } from '../ui/button';
 import MenuBarIcon from '../icon/menuBarIcon';
 import DownArrowIcon from '../icon/downArrowIcone';
-import { menuItems } from '../../../data/index';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import '@/styles/globals.css';
+import NavbarListMenu from './navbarListMenu';
 const Layout = () => {
-  const router = useRouter();
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
-  const visibleItems = menuItems.slice(0, 12);
-  const dropdownItems = menuItems.slice(12);
   return (
     <>
-      <div className=''>
-        <div className='p-4 px-32 flex gap-6 items-center'>
-          <div className='1/6 '>
+      <div className='parent-container border'>
+        {/* TOP NAVBAR PART */}
+
+        <div className='navbar-first'>
+          <section className='flex items-center justify-start'>
             <Image src={logo} alt='' height={250} width={240} />
-          </div>
-          <div className='w-5/6 border flex items-center rounded-full'>
-            <div className='w-full pl-2'>
+          </section>
+          <section className=' border rounded-full'>
+            <div className=' flex items-center justify-center'>
               <input
                 type='text '
                 placeholder='FreshShopping Items '
-                className='w-full p-1 focus:outline-none'
+                className='w-full ml-1 pl-2 focus:outline-none '
               />
+              <div className='p-2  bg-black rounded-full '>
+                <SearchIcon size={24} color='white' />
+              </div>
             </div>
-            <div className='p-2  bg-black rounded-full '>
-              <SearchIcon size={24} color='white' />
-            </div>
-          </div>
-          <div className=' w-2/6  flex items-center gap-4 justify-center'>
+          </section>
+          <section className='flex items-center justify-end gap-4 border'>
             <div className=' flex items-center gap-2'>
               <AppIcon size={24} color='black' />
               <span className='text-sm'>
@@ -55,53 +51,22 @@ const Layout = () => {
                 <p className='text-sm'>Cart</p>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 
-        <div className='px-32 flex gap-6 items-center'>
-          <div className='flex items-center bg-gray-400 p-1 rounded-full'>
+        {/* BOTTOM NAVBAR PART */}
+
+        <div className='flex items-center gap-4 mt-2'>
+          <section className='flex items-center bg-gray-400 px-4 rounded-full'>
             <MenuBarIcon size={24} color='black' />
             <Button className='text-[20px]'>All Categories</Button>
-            <div className='ml-12'>
+            <section className='ml-12'>
               <DownArrowIcon size={24} color='black' />
-            </div>
-          </div>
-          <div className='flex items-center gap-8 '>
-            {visibleItems &&
-              visibleItems.length > 0 &&
-              visibleItems.map((item) => (
-                <div
-                  key={item.id}
-                  className='text-[18px] hover:bg-gray-200 p-3 rounded-xl cursor-pointer'
-                  onClick={() => router.push(item.route)}
-                >
-                  {item.label}
-                </div>
-              ))}
-
-            {menuItems.length > 12 && (
-              <div
-                className='relative text-[18px] hover:bg-gray-200 p-3 rounded-xl cursor-pointer'
-                onMouseEnter={() => setIsDropdownVisible(true)}
-                onMouseLeave={() => setIsDropdownVisible(false)}
-              >
-                More
-                {isDropdownVisible && (
-                  <div className='absolute top-full right-0 m-1  w-48 bg-gray-200 shadow-lg rounded-xl z-10'>
-                    {dropdownItems.map((item) => (
-                      <div
-                        key={item.id}
-                        className='text-[16px] px-4 py-2 hover:bg-gray-100 cursor-pointer'
-                        onClick={() => router.push(item.route)}
-                      >
-                        {item.label}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+            </section>
+          </section>
+          <section>
+            <NavbarListMenu />
+          </section>
         </div>
       </div>
     </>
