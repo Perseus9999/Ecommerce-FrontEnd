@@ -67,7 +67,7 @@ const Navbar = () => {
             <DownArrowIcon size={24} color='black' />
           </section>
         </section>
-        <section className='col-span-2  '>
+        <section className='col-span-2 border'>
           <NavbarListItem item={navItem} />
         </section>
       </div>
