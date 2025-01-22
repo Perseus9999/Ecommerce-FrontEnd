@@ -17,7 +17,7 @@ const NavbarListItem = ({ item }: NavItemProps) => {
 
       if (screenWidth >= 2160) {
         setVisibleCount(11);
-      } else if (screenWidth >= 1955 && screenWidth <= 2107) {
+      } else if (screenWidth >= 1955 && screenWidth <= 2159) {
         setVisibleCount(10);
       } else if (screenWidth >= 1838 && screenWidth <= 1954) {
         setVisibleCount(9);
@@ -30,7 +30,7 @@ const NavbarListItem = ({ item }: NavItemProps) => {
       } else if (screenWidth >= 1024 && screenWidth <= 1239) {
         setVisibleCount(5);
       } else {
-        setVisibleCount(4);
+        setVisibleCount(11);
       }
     };
 
@@ -51,7 +51,7 @@ const NavbarListItem = ({ item }: NavItemProps) => {
         <div
           key={navItem.id}
           onClick={() => router.push(navItem.route)}
-          className='px-4 cursor-pointer border'
+          className='px-4 cursor-pointer '
         >
           <p className='text-[18px]'>{navItem.label}</p>
         </div>

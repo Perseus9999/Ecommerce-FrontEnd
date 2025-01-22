@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <div className='parent-container '>
       <div className='navbar-container '>
-        <section className='flex items-center'>
+        <section className='flex items-center '>
           <Image src={logo} alt='' height={250} width={200} />
         </section>
-        <section className=' flex items-center pl-2 border-2 border-black rounded-full'>
+        <section className=' flex items-center pl-2 border-2 border-black rounded-full '>
           <div className='w-full '>
             <input
               type='text'
@@ -29,7 +29,7 @@ const Navbar = () => {
             <SearchIcon color='white' size={24} />
           </div>
         </section>
-        <section className=' flex justify-end gap-4'>
+        <section className=' flex justify-end gap-4 '>
           <div className='flex items-center gap-2'>
             <div>
               <AppIcon color='black' size={24} />
@@ -67,7 +67,7 @@ const Navbar = () => {
             <DownArrowIcon size={24} color='black' />
           </section>
         </section>
-        <section className='col-span-2 border'>
+        <section className='col-span-2 '>
           <NavbarListItem item={navItem} />
         </section>
       </div>
