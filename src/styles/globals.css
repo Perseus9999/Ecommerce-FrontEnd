@@ -7,51 +7,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-.parent-container {
-  width: 100%;
-  padding: 20px 100px;
-}
 .border {
-  border: 2px solid black;
+  border: 2px solid red;
+}
+.parent-container {
+  padding: 15px 7%;
 }
 
-/* LAYOUT SECTION */
-.navbar-first {
+.navbar-container {
   display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 10px;
   align-items: center;
-  gap: 30px;
-}
-
-@media (max-width: 1700px) {
-  .parent-container {
-    width: 100%;
-    padding: 20px 20px;
-  }
-}
-
-@media (max-width: 1536px) {
-  .parent-container {
-    width: 100%;
-    padding: 20px 20px;
-  }
-  .navbar-first {
-    display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
-    align-items: center;
-    gap: 30px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .parent-container {
-    width: 100%;
-    padding: 20px 10px;
-  }
-  .navbar-first {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr 2fr;
-    align-items: center;
-    gap: 5px;
-  }
 }
