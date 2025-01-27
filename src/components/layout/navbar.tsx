@@ -8,6 +8,8 @@ import SearchIcon from '../icon/searchIcone';
 import DownArrowIcon from '../icon/downArrowIcone';
 import { useState } from 'react';
 import { Button } from '../ui/button';
+import { navItem } from '../../../data/data';
+import NavbarItem from './navbarItem';
 
 const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -26,7 +28,7 @@ const Navbar = () => {
       <div
         className={` parent-container grid items-center gap-4 ${
           isSearchVisible ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
-        } lg:grid-cols-3 bordertest`}
+        } lg:grid-cols-3 `}
       >
         {/* Logo Section */}
         <section className=' lg:w-[200px] '>
@@ -45,7 +47,7 @@ const Navbar = () => {
             <input
               type='text'
               placeholder='search items..'
-              className='w-full focus:outline-none text-[16px] mx-2 '
+              className='w-full focus:outline-none text-[16px] mx-2 pl-1'
             />
           </div>
           <div className='bg-black rounded-full xl:p-2'>
@@ -54,7 +56,7 @@ const Navbar = () => {
         </section>
 
         {/* Icons and Menu Section */}
-        <section className='flex items-center gap-3 justify-end '>
+        <section className='flex items-center gap-4 justify-end  2xl:gap-8'>
           {/* Small Search Icon (Hidden on lg and above) */}
           <div>
             {!isSearchVisible && (
@@ -67,7 +69,7 @@ const Navbar = () => {
           {/* App Icon */}
           <div className='flex items-center gap-2'>
             <AppIcon color='black' size={24} />
-            <div className='hidden xl:block'>
+            <div className='hidden xl:block cursor-pointer'>
               <span className='text-sm'>
                 Welcome<span className='block'>EcoHuB App</span>
               </span>
@@ -77,7 +79,7 @@ const Navbar = () => {
           {/* Shopping Cart Icon */}
           <div className='flex items-center gap-2'>
             <ShoppingCartIcon color='black' size={24} />
-            <div className='hidden xl:block'>
+            <div className='hidden xl:block cursor-pointer'>
               <span className='bg-black text-white p-1 rounded-full'>0</span>
               <p className='text-sm'>Cart</p>
             </div>
@@ -86,7 +88,7 @@ const Navbar = () => {
           {/* Profile Icon */}
           <div className='flex items-center gap-2'>
             <ProfileIcon color='black' size={24} />
-            <div className='hidden xl:block'>
+            <div className='hidden xl:block cursor-pointer'>
               <span className='text-sm'>
                 Welcome <span className='block'>Sign in / Register</span>
               </span>
@@ -103,8 +105,8 @@ const Navbar = () => {
 
       {/* SECOND PART */}
 
-      <div className='parent-container hidden lg:block mt-1'>
-        <div className='  flex items-center gap-4  '>
+      <div className='parent-container hidden lg:block mt-1 '>
+        <div className='  flex items-center gap-6 '>
           <section className='flex items-center bg-[#f5f5f5] px-4 rounded-full'>
             <MenuBarIcon size={24} color='black' />
             <Button className='text-[18px]'>All Categories</Button>
@@ -112,7 +114,9 @@ const Navbar = () => {
               <DownArrowIcon size={24} color='black' />
             </div>
           </section>
-          <section>lknfkldsn</section>
+          <section>
+            <NavbarItem items={navItem} />
+          </section>
         </div>
       </div>
     </>
