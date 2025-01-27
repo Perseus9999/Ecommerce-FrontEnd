@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import logo from '../../../public/assets/ecohub.png';
 import AppIcon from '../icon/appIcone';
-import ProfileIcon from '../icon/profileIcon';
+
 import ShoppingCartIcon from '../icon/cartIcone';
 import MenuBarIcon from '../icon/menuBarIcon';
 import SearchIcon from '../icon/searchIcone';
@@ -11,6 +11,7 @@ import { Button } from '../ui/button';
 import { navItem } from '../../../data/data';
 import NavbarItem from './navbarItem';
 import { useRouter } from 'next/router';
+import Auth from '../auth';
 
 const Navbar = () => {
   const router = useRouter();
@@ -57,9 +58,7 @@ const Navbar = () => {
           </div>
         </section>
 
-        {/* Icons and Menu Section */}
         <section className='flex items-center gap-4 justify-end  2xl:gap-8 '>
-          {/* Small Search Icon (Hidden on lg and above) */}
           <div>
             {!isSearchVisible && (
               <div className='md:block lg:hidden' onClick={handleSearchVisible}>
@@ -88,20 +87,15 @@ const Navbar = () => {
           </div>
 
           {/* Profile Icon */}
-          <div className='flex items-center gap-2'>
-            <ProfileIcon color='black' size={24} />
-            <div className='hidden xl:block cursor-pointer'>
-              <span className='text-sm'>
-                Welcome <span className='block'>Sign in / Register</span>
-              </span>
-            </div>
+          <div>
+            <Auth />
           </div>
 
           {/* Menu Bar Icon */}
           <div className='relative lg:hidden' onClick={handleMenuVisible}>
             <MenuBarIcon color='black' size={24} />
             {isMenuVisible && (
-              <div className='absolute bg-[#eef2f7] right-0 mt-1 w-[200px]'>
+              <div className='absolute  right-0 mt-1 w-[200px] '>
                 {navItem.slice(0, 7).map((item) => (
                   <div
                     key={item.id}
