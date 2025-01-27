@@ -10,8 +10,10 @@ import { useState } from 'react';
 import { Button } from '../ui/button';
 import { navItem } from '../../../data/data';
 import NavbarItem from './navbarItem';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  const router = useRouter();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
@@ -56,7 +58,7 @@ const Navbar = () => {
         </section>
 
         {/* Icons and Menu Section */}
-        <section className='flex items-center gap-4 justify-end  2xl:gap-8'>
+        <section className='flex items-center gap-4 justify-end  2xl:gap-8 '>
           {/* Small Search Icon (Hidden on lg and above) */}
           <div>
             {!isSearchVisible && (
@@ -98,7 +100,19 @@ const Navbar = () => {
           {/* Menu Bar Icon */}
           <div className='relative lg:hidden' onClick={handleMenuVisible}>
             <MenuBarIcon color='black' size={24} />
-            {isMenuVisible && <div className='absolute'>Menu Content</div>}
+            {isMenuVisible && (
+              <div className='absolute bg-[#eef2f7] right-0 mt-1 w-[200px]'>
+                {navItem.slice(0, 7).map((item) => (
+                  <div
+                    key={item.id}
+                    onClick={() => router.push(item.route)}
+                    className='px-2 my-1 hover:bg-white'
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </div>

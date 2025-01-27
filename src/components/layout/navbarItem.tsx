@@ -57,12 +57,12 @@ const NavbarItem = ({ items }: NavItemProps) => {
         <div className='relative'>
           <Button
             className='text-[18px] font-semibold ml-4'
-            onClick={handleDropDown} // Toggle the dropdown on click
+            onClick={handleDropDown}
           >
             More...
           </Button>
 
-          {isDropdownOpen && ( // Only render dropdown if it's open
+          {isDropdownOpen && (
             <div className='absolute right-0 mt-2 w-48 bg-white border border-gray-300 shadow-md rounded-lg'>
               {hiddenItems.map((item: NavItem) => (
                 <div key={item.id} className='p-2 hover:bg-gray-100'>
