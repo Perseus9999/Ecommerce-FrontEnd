@@ -7,34 +7,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-.border {
-  border: 2px solid red;
-}
-.parent-container {
-  padding: 15px 7%;
-}
-
-.navbar-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 2fr;
-  gap: 10px;
-  align-items: center;
-}
-
-@media (max-width: 1536px) {
-  .navbar-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    gap: 10px;
-    align-items: center;
-  }
-}
-
-@media (max-width: 1280px) {
-  .navbar-container {
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    gap: 10px;
-    align-items: center;
-  }
-}
