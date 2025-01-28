@@ -12,6 +12,7 @@ import { navItem } from '../../../data/data';
 import NavbarItem from './navbarItem';
 import { useRouter } from 'next/router';
 import Auth from '../auth';
+import CountryIcon from '../icon/countryIcon';
 
 const Navbar = () => {
   const router = useRouter();
@@ -30,12 +31,14 @@ const Navbar = () => {
     <>
       <div
         className={` parent-container grid items-center gap-4 ${
-          isSearchVisible ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
-        } lg:grid-cols-3 `}
+          isSearchVisible
+            ? 'sm:grid-cols-[130px,1fr,.5fr] md:grid-cols-[130px,1fr,.5fr]'
+            : 'sm:grid-cols-2'
+        } lg:grid-cols-[180px,1fr,450px] xl:grid-cols-[200px,1fr,420px] 2xl:grid-cols-[200px,1fr,450px] `}
       >
         {/* Logo Section */}
-        <section className=' lg:w-[200px] '>
-          <div className='w-[130px] h-[26px] xl:w-[180px] flex items-center'>
+        <section className=''>
+          <div className='w-[130px] h-[26px] lg:w-[180px] flex items-center'>
             <Image src={logo} alt='logo' height={400} width={400} />
           </div>
         </section>
@@ -43,8 +46,8 @@ const Navbar = () => {
         {/* Search Section */}
         <section
           className={`${
-            isSearchVisible ? 'block' : 'hidden lg:block'
-          }  flex items-center justify-between border border-black rounded-full  lg:flex xl:py-1 `}
+            isSearchVisible ? 'block ' : 'hidden lg:block'
+          }  flex items-center justify-between border border-black rounded-full  lg:flex  `}
         >
           <div>
             <input
@@ -53,12 +56,12 @@ const Navbar = () => {
               className='w-full focus:outline-none text-[16px] mx-2 pl-1'
             />
           </div>
-          <div className='bg-black rounded-full xl:p-2'>
+          <div className='bg-black rounded-full lg:p-2'>
             <SearchIcon color='white' size={24} />
           </div>
         </section>
 
-        <section className='flex items-center gap-4 justify-end  2xl:gap-8 '>
+        <section className='flex items-center gap-4 justify-end md:gap-4 lg:gap-4 xl:gap-3 2xl:gap-4 '>
           <div>
             {!isSearchVisible && (
               <div className='md:block lg:hidden' onClick={handleSearchVisible}>
@@ -70,9 +73,25 @@ const Navbar = () => {
           {/* App Icon */}
           <div className='flex items-center gap-2'>
             <AppIcon color='black' size={24} />
-            <div className='hidden xl:block cursor-pointer'>
+            <div className='hidden lg:block cursor-pointer'>
               <span className='text-sm'>
                 Welcome<span className='block'>EcoHuB App</span>
+              </span>
+            </div>
+          </div>
+
+          {/* Country Icon */}
+          <div className='flex items-center gap-2'>
+            {/* Flag */}
+            <CountryIcon color='#259245' size={24} />
+            <div className='hidden lg:block cursor-pointer'>
+              <span className='text-sm'>
+                {/* Language */}
+                EN/
+                <span className='block'>
+                  {/* Currency */}
+                  BDT
+                </span>
               </span>
             </div>
           </div>
@@ -80,7 +99,7 @@ const Navbar = () => {
           {/* Shopping Cart Icon */}
           <div className='flex items-center gap-2'>
             <ShoppingCartIcon color='black' size={24} />
-            <div className='hidden xl:block cursor-pointer'>
+            <div className='hidden lg:block cursor-pointer'>
               <span className='bg-black text-white p-1 rounded-full'>0</span>
               <p className='text-sm'>Cart</p>
             </div>

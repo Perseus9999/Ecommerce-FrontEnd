@@ -18,7 +18,7 @@ const Auth = () => {
         onMouseLeave={handleMouseLeave}
       >
         <ProfileIcon color='black' size={24} />
-        <div className='hidden xl:block cursor-pointer'>
+        <div className='hidden lg:block cursor-pointer'>
           <span className='text-sm'>
             Welcome <span className='block'>Sign in / Register</span>
           </span>
