@@ -13,6 +13,7 @@ import NavbarItem from './navbarItem';
 import { useRouter } from 'next/router';
 import Auth from '../auth';
 import CountryIcon from '../icon/countryIcon';
+import CrossIcon from '../icon/crossIcon';
 
 const Navbar = () => {
   const router = useRouter();
@@ -113,9 +114,14 @@ const Navbar = () => {
 
           {/* Menu Bar Icon */}
           <div className='relative lg:hidden' onClick={handleMenuVisible}>
-            <MenuBarIcon color='black' size={24} />
+            {!isMenuVisible ? (
+              <MenuBarIcon color='black' size={24} />
+            ) : (
+              <CrossIcon color='black' size={24} />
+            )}
+
             {isMenuVisible && (
-              <div className='absolute  right-0 mt-1 w-[200px] '>
+              <div className='absolute  right-0 mt-1 w-[150px] p-2 shadow-lg shadow-gray-400 z-40 bg-white '>
                 {navItem.slice(0, 7).map((item) => (
                   <div
                     key={item.id}
