@@ -1,82 +1,88 @@
 import { useState, useEffect } from 'react';
 import { NavItem } from '@/types/type';
-import { Button } from '../ui/button';
+import FireIcon from '../icon/fireIcon';
+import DownArrowIcon from '../icon/downArrowIcone';
+
 interface NavItemProps {
   items: NavItem[];
 }
 
 const NavbarItem = ({ items }: NavItemProps) => {
-  // const [visibleItems, setVisibleItems] = useState<NavItem[]>([]);
-  // const [hiddenItems, setHiddenItems] = useState<NavItem[]>([]);
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const handleDropDown = () => {
-  //   setIsDropdownOpen(!isDropdownOpen);
-  // };
+  const [isDropdown, setIsDropdown] = useState<boolean>(false);
+  const [visibleItemsCount, setVisibleItemsCount] = useState<number>(3);
 
-  // useEffect(() => {
-  //   const updateItems = () => {
-  //     const screenWidth = window.innerWidth;
-  //     let visibleCount = 0;
-  //     if (screenWidth > 2400) visibleCount = 15;
-  //     else if (screenWidth > 2300) visibleCount = 14;
-  //     else if (screenWidth > 2200) visibleCount = 14;
-  //     else if (screenWidth > 2100) visibleCount = 12;
-  //     else if (screenWidth > 2000) visibleCount = 11;
-  //     else if (screenWidth > 1800) visibleCount = 10;
-  //     else if (screenWidth > 1600) visibleCount = 9;
-  //     else if (screenWidth > 1360) visibleCount = 7;
-  //     else if (screenWidth > 1200) visibleCount = 6;
-  //     else if (screenWidth > 1140) visibleCount = 5;
-  //     else visibleCount = 5;
+  const handleDropdown = () => {
+    setIsDropdown(!isDropdown);
+  };
 
-  //     setVisibleItems(items.slice(0, visibleCount));
-  //     setHiddenItems(items.slice(visibleCount));
-  //   };
+  const updateVisibleItemsCount = () => {
+    const screenWidth = window.innerWidth;
 
-  //   updateItems();
+    if (screenWidth >= 1620) setVisibleItemsCount(8);
+    else if (screenWidth >= 1490) setVisibleItemsCount(7);
+    else if (screenWidth >= 1360) setVisibleItemsCount(6);
+    else if (screenWidth >= 1230) setVisibleItemsCount(5);
+    else if (screenWidth >= 1100) setVisibleItemsCount(4);
+    else setVisibleItemsCount(3);
+  };
 
-  //   window.addEventListener('resize', updateItems);
-  //   return () => {
-  //     window.removeEventListener('resize', updateItems);
-  //   };
-  // }, [items]);
+  useEffect(() => {
+    updateVisibleItemsCount();
+    window.addEventListener('resize', updateVisibleItemsCount);
+
+    return () => {
+      window.removeEventListener('resize', updateVisibleItemsCount);
+    };
+  }, []);
+
+  const visibleItems = items.slice(0, visibleItemsCount);
+  const dropdownItems = items.slice(visibleItemsCount);
 
   return (
-    // <div className=' flex items-center justify-between'>
-    //   <div className='flex items-center gap-8'>
-    //     {visibleItems.map((item: NavItem) => (
-    //       <div key={item.id}>
-    //         <ul className='m-0 p-0'>
-    //           <li className='text-[18px] cursor-default'>{item.label}</li>
-    //         </ul>
-    //       </div>
-    //     ))}
-    //   </div>
+    <div className='flex justify-between gap-8 lg:gap-0'>
+      {/* Super Deal Section */}
+      <div className='flex items-center w-[120px] cursor-pointer hover:text-red-900'>
+        <FireIcon color='green' size={24} />
+        <span className='font-medium'>Super Deal</span>
+      </div>
 
-    //   {hiddenItems.length > 0 && (
-    //     <div className='relative'>
-    //       <Button
-    //         className='text-[18px] font-semibold ml-4'
-    //         onClick={handleDropDown}
-    //       >
-    //         More...
-    //       </Button>
+      {/* Visible Items */}
+      {visibleItems.map((item) => (
+        <div key={item.id} className=' w-[120px] text-center'>
+          <ul className='m-0 p-0 text-[18px]'>
+            <li className='hover:text-green-500 font-medium border-b-2 border-transparent hover:border-green-500 cursor-pointer'>
+              {item.label}
+            </li>
+          </ul>
+        </div>
+      ))}
 
-    //       {isDropdownOpen && (
-    //         <div className='absolute right-0 mt-2 w-48 bg-white border border-gray-300 shadow-md rounded-lg'>
-    //           {hiddenItems.map((item: NavItem) => (
-    //             <div key={item.id} className='p-2 hover:bg-gray-100'>
-    //               <a href={item.route} className='text-black text-sm'>
-    //                 {item.label}
-    //               </a>
-    //             </div>
-    //           ))}
-    //         </div>
-    //       )}
-    //     </div>
-    //   )}
-    // </div>
-    <>jfksd</>
+      {/* Dropdown for Remaining Items */}
+      <div
+        className='flex items-center justify-center gap-[-3px] w-[120px] cursor-pointer relative'
+        onClick={handleDropdown}
+      >
+        <span className='font-medium text-[18px]'>More</span>
+        <DownArrowIcon color='black' size={18} />
+
+        {isDropdown && (
+          <div className='absolute top-full right-0 bg-white shadow-lg border border-gray-300 w-[200px] p-2 z-50 '>
+            {dropdownItems.length > 0 ? (
+              dropdownItems.map((item) => (
+                <div
+                  key={item.id}
+                  className='hover:bg-gray-200 p-2 rounded cursor-pointer'
+                >
+                  {item.label}
+                </div>
+              ))
+            ) : (
+              <div className='text-gray-500 text-center'>No item available</div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

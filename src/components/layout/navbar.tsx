@@ -44,19 +44,20 @@ const Navbar = () => {
         </section>
 
         {/* Search Section */}
+
         <section
           className={`${
-            isSearchVisible ? 'block ' : 'hidden lg:block'
-          }  flex items-center justify-between border border-black rounded-full  lg:flex  `}
+            isSearchVisible ? 'flex' : 'hidden lg:flex'
+          } items-center justify-between border border-black rounded-full`}
         >
-          <div>
+          <div className='flex-1'>
             <input
               type='text'
               placeholder='search items..'
-              className='w-full focus:outline-none text-[16px] mx-2 pl-1'
+              className='w-full text-[16px] mx-2 pl-2 outline-none'
             />
           </div>
-          <div className='bg-black rounded-full lg:p-2'>
+          <div className='bg-black rounded-full p-2 cursor-pointer'>
             <SearchIcon color='white' size={24} />
           </div>
         </section>
